@@ -1,0 +1,19 @@
+[   {"field":"city","datatype":"categorical","type":"character","unique":true},
+    {"field":"place","datatype":"categorical","type":"character","unique":true},
+    {"field":"who","datatype":"categorical","type":"character","unique":true},
+    {"field":"press","datatype":"categorical","type":"character","unique":true},
+
+
+    {"field":"date","datatype":"time","type":"character","unique":true,"derived":[
+        {"resolution":"year"},
+        {"resolution":"month"},
+	{"resolution":"week"},
+	{"resolution":"day"},
+	{"resolution":"month","aggregate":"year"},
+	{"resolution":"week","aggregate":"year"},
+	{"resolution":"day","aggregate":"year"},
+	{"resolution":"day","aggregate":"month"},
+	{"resolution":"day","aggregate":"week"}
+    ]},
+    {"field":"searchstring","datatype":"searchstring","type":"text","unique":true}
+]
