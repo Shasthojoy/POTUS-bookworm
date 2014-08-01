@@ -21,7 +21,7 @@ def printOut(filename):
         try:
             id = str(n)
             dat['filename'] = id + filename
-            dat['searchstring'] = line
+            dat['searchstring'] = re.sub(r"[\t\n]"," ",line)
             stuff = line.split("\t")
 
             for entry in ["time","event","place","press","date"]:
